@@ -54,7 +54,7 @@
                                 <label for="sort_order" class="form-label">{{ __('label.sortOrder') }}</label>
                                 <input type="number" name="sort_order" id="sort_order"
                                     class="form-control @error('sort_order') is-invalid alert-danger @enderror mandatory"
-                                    value="">
+                                    value="{{ $sort_order ?: old('sort_order') }}">
                                 @error('sort_order')
                                     <x-input-error :message="$message" />
                                 @enderror
@@ -100,15 +100,15 @@
 
                     <div class="card-footer p-3">
                         <div class="text-end">
-                            <x-button-a href="{{ route('ingredients.index') }}" class="btn-back">
+                            <x-button-a href="{{ route('systemparameter.expense.index') }}" class="btn-back">
                                 <i class="bi bi-arrow-left me-2"></i>
                                 {{ __('button.back') }}
                             </x-button-a>
 
-                            <x-primary-button type="submit" class="btn-save">
+                            <x-button type="submit" class="btn-save">
                                 <i class="bi bi-save2 me-2"></i>
                                 {{ __('button.save') }}
-                            </x-primary-button>
+                            </x-button>
                         </div>
                     </div>
 

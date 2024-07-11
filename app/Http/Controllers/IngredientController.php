@@ -31,7 +31,6 @@ class IngredientController extends Controller
      */
     public function create()
     {
-        info('ER');
         return view('ingredients.create');
     }
 
@@ -49,7 +48,8 @@ class IngredientController extends Controller
      */
     public function show(Ingredient $ingredient)
     {
-        //
+        info($ingredient);
+        return view('ingredients.show');
     }
 
     /**

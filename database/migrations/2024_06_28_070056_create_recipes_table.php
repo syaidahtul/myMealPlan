@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('recipes', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('name',255);
+            $table->string('slug')->unique()->index();
+            $table->string('name');
             $table->string('src_name');
             $table->text('src_url')->nullable();
             $table->timestamps();

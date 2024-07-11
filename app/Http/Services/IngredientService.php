@@ -13,7 +13,6 @@ class IngredientService {
     }
 
     public function saveIngredient(Request $request){
-        info($request);
         $ingredeientSaved = Ingredient::create($request);
         return $ingredeientSaved;
     }
