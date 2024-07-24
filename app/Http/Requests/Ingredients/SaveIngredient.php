@@ -15,6 +15,8 @@ class SaveIngredient extends FormRequest
         return true;
     }
 
+    public function messages() {}
+
     /**
      * Get the validation rules that apply to the request.
      *
@@ -22,9 +24,8 @@ class SaveIngredient extends FormRequest
      */
     public function rules(Request $request): array
     {
-        info($request);
         return [
-            'name' => 'required'
+            'name' => 'required',
         ];
     }
 }

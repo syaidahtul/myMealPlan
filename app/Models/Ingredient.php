@@ -13,7 +13,13 @@ class Ingredient extends Model
 
     protected $fillable = [
         'name',
+        'slug',
         'unit'
     ];
+
+    public function setSlugAttribute($value)
+    {
+        $this->attributes['slug'] = Str::slug($value);
+    }
 
 }

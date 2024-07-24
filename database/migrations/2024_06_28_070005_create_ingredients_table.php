@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('ingredients', function (Blueprint $table) {
             $table->uuid('id')->primary();
+            $table->string('slug');
             $table->string('name')->unique('idx_ingredient_name');
             $table->json('unit')->nullable();
             $table->timestamps();
