@@ -1,0 +1,143 @@
+/*!
+* Version: myMealPlan 1.0.0
+*
+* Copyright: Ini adalah bayang-bayangan
+*
+* Contact:
+* syaidahtul.aziz@gmail.com
+*/
+
+:root {
+    --mmp-body-font-size: 1rem;
+    --mmp-body-font-weight: 400;
+    --mmp-body-line-height: 1.6;
+    --mmp-border-radius: 0.25rem;
+    --mmp-border-radius-sm: 0.25rem;
+    --mmp-border-radius-lg: 0.5rem;
+    --mmp-border-radius-xl: 1rem;
+    --mmp-border-radius-xxl: 2rem;
+    --mmp-border-radius-pill: 50rem;
+    --mmp-border-width: 1px;
+    --mmp-surface-color: #4f4f4f;
+    --mmp-body-bg: #fff;
+    --mmp-border-color: #e6dee6;
+    --mmp-form-control-label-color: #787777;
+    --mmp-box-shadow-inset: inset 0 0 0 rgba(0, 0, 0, 0);
+}
+
+[data-mmp-theme=light] {
+    --mmp-surface-color: #4f4f4f;
+    --mmp-body-bg: #fff;
+    --mmp-border-color: #4f4f4f;
+}
+
+[data-mmp-theme=dark] {
+    --mmp-surface-color: #fff;
+    --mmp-body-bg: #000;
+    --mmp-border-color: #fff;
+}
+
+.btn-primary {
+    &:hover {
+        background-color: var(--primary-hover-bg);
+        border-color: var(--primary-hover-border);
+        color: var(--primary-hover-color);
+    }
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: var(--mmp-body-font-size);
+    font-weight: var(--mmp-body-font-weight);
+    line-height: var(--mmp-body-line-height);
+    color: var(--mmp-surface-color);
+    background-color: var(--mmp-body-bg);
+    border: var(--mmp-border-width) solid var(--mmp-border-color);
+    border-radius: var(--mmp-border-radius);
+    box-shadow: var(--mmp-box-shadow-inset);
+    transition: all .2s linear;
+}
+
+.form-label {
+    margin-bottom: .5rem;
+    color: var(--mmp-form-control-label-color);
+}
+
+.form-outline {
+    position: relative;
+    width: 100%;
+}
+
+.form-outline .form-helper {
+    width: 100%;
+    position: absolute;
+    font-size: .875em;
+    color: #757575;
+}
+
+.form-outline .form-helper .form-counter {
+    text-align: right;
+}
+
+.form-outline .trailing {
+    position: absolute;
+    right: 10px;
+    left: initial;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--mmp-surface-color);
+}
+
+.form-outline .form-icon-trailing {
+    padding-right: 2rem !important;
+}
+
+.form-outline .form-control {
+    min-height: auto;
+    padding-top: .32rem;
+    padding-bottom: .32rem;
+    padding-left: .75rem;
+    padding-right: .75rem;
+    background: rgba(0, 0, 0, 0);
+    transition: all .2s linear;
+}
+
+.form-outline .form-control~.form-label {
+    position: absolute;
+    top: 0;
+    max-width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    left: .75rem;
+    padding-top: .37rem;
+    pointer-events: none;
+    transform-origin: 0 0;
+    transition: all .2s ease-out;
+    color: var(--mmp-form-control-label-color);
+    margin-bottom: 0;
+}
+
+.form-outline .form-label {
+    position: absolute;
+    top: 50%;
+    left: .75rem;
+    transform: translateY(-50%);
+    transition: all 0.2s ease-out;
+    pointer-events: none;
+    color: var(--mmp-form-control-label-color);
+    font-size: 1rem;
+    /* Default size */
+}
+
+.form-outline .form-control:focus+.form-label,
+.form-outline .form-control:not(:placeholder-shown)+.form-label {
+    top: -0.75rem;
+    left: .75rem;
+    font-size: 0.75rem;
+    /* Smaller size when floating */
+    color: var(--mmp-surface-color);
+}

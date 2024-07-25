@@ -93,7 +93,7 @@
                             <a href="{{ route('ingredients.index') }}"
                                 class="btn fw-bold rounded-3 text-capitalize px-4 shadow">Back
                             </a>
-                            <x-primary-button type="submit">Save</x-primary-button>
+                            <x-button-primary type="submit">Save</x-button-primary>
                         </div>
                     </div>
 

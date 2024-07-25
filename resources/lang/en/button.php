@@ -1,6 +1,11 @@
+<?php
+
 return [
     'update' => 'Update',
     'next' => 'Next',
     'save' => 'Save',
-    'back' => 'Back'
+    'delete' => 'Delete',
+    'back' => 'Back',
+    'login' => 'Login',
+    'register' => 'Register',
 ];

@@ -1,6 +1,11 @@
+<?php
+
 return [
     'update' => 'Kemaskini',
     'next' => 'Seterusnya',
     'save' => 'Simpan',
-    'back' => 'Kembali'
+    'delete' => 'Padam',
+    'back' => 'Kembali',
+    'login' => 'Log Masuk',
+    'register' => 'Daftar',
 ];

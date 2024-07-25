@@ -11,7 +11,7 @@
         <div class="row g-3 mb-4">
             <div class="col-md-6">
                 <x-input-label required>{{ __('Name') }}</x-input-label>
-                <x-text-input name="name" :value="old('name', $event?->name)" />
+                <x-input-text name="name" :value="old('name', $event?->name)" />
             </div>
             <div class="col-md-6">
                 <x-input-label>{{ __('Status') }}</x-input-label>
@@ -42,7 +42,7 @@
                 <x-input-label>{{ __('Source') }}</x-input-label>
                 <div class="input-group">
                     <span class="input-group-text"><i class="fa-solid fa-globe"></i></span>
-                    <x-text-input name="source" :value="old('source', $event?->source)" />
+                    <x-input-text name="source" :value="old('source', $event?->source)" />
                 </div>
             </div>
             <div class="col-md-12">
@@ -63,39 +63,39 @@
         <div class="row g-3">
             <div class="col-md-6">
                 <x-input-label required>{{ __('Start Date') }}</x-input-label>
-                <x-text-input type="date" name="started_date" :value="old('started_date', $event?->started_at?->format('Y-m-d'))" />
+                <x-input-text type="date" name="started_date" :value="old('started_date', $event?->started_at?->format('Y-m-d'))" />
             </div>
             <div class="col-md-6">
                 <x-input-label required>{{ __('Start At') }}</x-input-label>
-                <x-text-input type="time" name="started_time" :value="old('started_time', $event?->started_at?->format('H:i'))" />
+                <x-input-text type="time" name="started_time" :value="old('started_time', $event?->started_at?->format('H:i'))" />
             </div>
             <div class="col-md-6">
                 <x-input-label required>{{ __('End Date') }}</x-input-label>
-                <x-text-input type="date" name="ended_date" :value="old('ended_date', $event?->ended_at?->format('Y-m-d'))" />
+                <x-input-text type="date" name="ended_date" :value="old('ended_date', $event?->ended_at?->format('Y-m-d'))" />
             </div>
             <div class="col-md-6">
                 <x-input-label required>{{ __('End At') }}</x-input-label>
-                <x-text-input type="time" name="ended_time" :value="old('ended_time', $event?->ended_at?->format('H:i'))" />
+                <x-input-text type="time" name="ended_time" :value="old('ended_time', $event?->ended_at?->format('H:i'))" />
             </div>
             <div class="col-md-6">
                 <x-input-label required>{{ __('Ticket Sale Start Date') }}</x-input-label>
-                <x-text-input type="date" name="ticket_sale_started_at" :value="old('ticket_sale_started_at', $event?->ticket_sale_started_at?->format('Y-m-d'))" />
+                <x-input-text type="date" name="ticket_sale_started_at" :value="old('ticket_sale_started_at', $event?->ticket_sale_started_at?->format('Y-m-d'))" />
             </div>
             <div class="col-md-6">
                 <x-input-label required>{{ __('Ticket Sale End Date') }}</x-input-label>
-                <x-text-input type="date" name="ticket_sale_ended_at" :value="old('ticket_sale_ended_at', $event?->ticket_sale_ended_at?->format('Y-m-d'))" />
+                <x-input-text type="date" name="ticket_sale_ended_at" :value="old('ticket_sale_ended_at', $event?->ticket_sale_ended_at?->format('Y-m-d'))" />
             </div>
             <div class="col-md-6">
                 <x-input-label>{{ __('Addon Disable Date') }}</x-input-label>
-                <x-text-input type="date" name="date_addon_disable" :value="old('date_addon_disable', $event?->date_addon_disable?->format('Y-m-d'))" />
+                <x-input-text type="date" name="date_addon_disable" :value="old('date_addon_disable', $event?->date_addon_disable?->format('Y-m-d'))" />
             </div>
             <div class="col-md-6">
                 <x-input-label required>{{ __('Ticket View Path') }}</x-input-label>
-                <x-text-input name="ticket_view_path" :value="old('ticket_view_path', $event?->ticket_view_path)" />
+                <x-input-text name="ticket_view_path" :value="old('ticket_view_path', $event?->ticket_view_path)" />
             </div>
             <div class="col-md-12">
                 <x-input-label required>{{ __('Location') }}</x-input-label>
-                <x-text-input name="location" :value="old('location', $event?->location)" />
+                <x-input-text name="location" :value="old('location', $event?->location)" />
             </div>
         </div>
         <div class="row g-3 mb-4 mt-1">
@@ -103,13 +103,13 @@
             <div class="col-md-6">
                 <div class="input-group">
                     <span class="input-group-text">{{ __('Latitude') }}</span>
-                    <x-text-input name="latitude" :value="old('latitude', $event?->latitude)" />
+                    <x-input-text name="latitude" :value="old('latitude', $event?->latitude)" />
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="input-group">
                     <span class="input-group-text">{{ __('Longitude') }}</span>
-                    <x-text-input name="longitude" :value="old('longitude', $event?->longitude)" />
+                    <x-input-text name="longitude" :value="old('longitude', $event?->longitude)" />
                 </div>
             </div>
         </div>

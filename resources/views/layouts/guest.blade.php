@@ -6,29 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>TEST {{ config('app.name', 'Laravel') }}</title>
+    <title>GUEST {{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-    <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <!-- Vite CSS -->
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 
 <body class="font-sans text-gray-900 antialiased">
-    <div class="flex min-h-screen flex-col items-center bg-gray-100 pt-6 dark:bg-gray-900 sm:justify-center sm:pt-0">
-        <div>
-            <a href="/">
-                <x-application-logo class="h-20 w-20 fill-current text-gray-500" />
-            </a>
-        </div>
+    <!-- Section: Design Block -->
+    <section class="text-lg-start text-center">
+        <!-- Custom Styles -->
+        <style>
+            .cascading-right {
+                margin-right: -50px;
+            }
 
-        <div
-            class="mt-6 w-full overflow-hidden bg-white px-6 py-4 shadow-md dark:bg-gray-800 sm:max-w-md sm:rounded-lg">
-            {{ $slot }}
+            @media (max-width: 991.98px) {
+                .cascading-right {
+                    margin-right: 0;
+                }
+            }
+
+            .container {
+                max-height: 100vh;
+            }
+        </style>
+
+        <!-- Jumbotron -->
+        <div class="container py-4 mx-auto">
+            <div class="row g-0 align-items-center">
+                <div class="col-lg-6 mb-lg-0 mb-5">
+                    <div class="card cascading-right bg-body-tertiary" style="backdrop-filter: blur(30px);">
+                        <div class="card-body shadow-5 p-5 text-center">
+                            {{ $slot }}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-lg-0 mb-5">
+                    <img src="{{ asset('images/004.jpg') }}" class="rounded-4 shadow-4" alt="" style="height: 42rem"/>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 </body>
 
 </html>

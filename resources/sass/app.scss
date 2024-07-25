@@ -1,0 +1,11 @@
+$primary: #732470;
+
+@import "bootstrap/scss/bootstrap.scss";
+
+body,
+html {
+    font-weight: 300;
+    font-family: $font-family-base, sans-serif !important
+}
+
+@import "./custom.scss";
