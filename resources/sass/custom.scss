@@ -37,11 +37,15 @@
     --mmp-border-color: #fff;
 }
 
-.btn-primary {
+.btn {
+    text-transform: uppercase;
+
     &:hover {
-        background-color: var(--primary-hover-bg);
-        border-color: var(--primary-hover-border);
-        color: var(--primary-hover-color);
+        background-color: $indigo-100;
+        border-color: var(--bs-btn-hover-border-color);
+        color: var(--bs-btn-hover-border-color);
+        font-weight: bold;
+        font-stretch: expanded;
     }
 }
 
