@@ -1,8 +1,8 @@
-<x-dashboard-layout>
+<x-app-layout>
     <div class="container-fluid">
         <div class="layout-specing">
             <div class="row">
-                <div class="col-12 mt-4">
+                <div class="mt-4 col-12">
                     <form action="{{ route('ingredients.store') }}" method="post">
                         @csrf
                         @include('ingredients.form', [
@@ -14,4 +14,4 @@
             </div>
         </div>
     </div>
-</x-dashboard-layout>
+</x-app-layout>
